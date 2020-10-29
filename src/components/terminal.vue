@@ -1,7 +1,6 @@
 <template>
-  <div id="container" class="load text-xxs xxs:text-xs xs:text-sm md:text-base absolute max-h-screen overflow-y-auto">
-      <pre class="term"> </pre>
-      <pre class="stego"></pre>
+  <div id="container" class="load text-xxs xxs:text-xs xs:text-sm md:text-base lg:text-lg max-h-screen h-auto overflow-y-auto scrolling-touch">
+      <pre id="term" class="term"> </pre>
   </div>
 </template>
 
@@ -9,17 +8,10 @@
 export default {
   name:"Terminal",
     methods: {
-  	scrollToEnd: function() {    	
-      var container = this.$el.querySelector("#container");
-      container.scrollTop = container.scrollHeight;
-    },
-  },
-  mounted () {
-    var textAnimated = document.querySelector(".term")
+    console: function() {
+    var textAnimated = document.querySelector("#term")
 
     var console = document.querySelector(".load");
-
-    var welcome = document.querySelector(".stego");
 
     var command = "bash hire-me.sh";
 
@@ -27,10 +19,10 @@ export default {
 
     var handle = "guest@svantepihl:~$";
 
-    var dino = ["\n",
-        " _______________________________________ ",
+    var dino = [
+        " ______________________________________ ",
         "(       Hello! Nice to meet you!       )",
-        "--------------------------------------- ",
+        "(______________________________________) ",
         "o                          .       .  ",
         " o                        / `.   .' ' ",
         "  o               .---.  <    > <    >  .---.",
@@ -77,7 +69,6 @@ export default {
         } else {
             textAnimated.textContent += "\n";
             printArray(arrayIndex+1,textArray)
-            this.scrollToEnd();
         }
 
     }
@@ -85,26 +76,24 @@ export default {
     function printArray(index,textArray) {
         if (index < textArray.length) {
             printRec(index,0, textArray)
-            this.scrollToEnd();
         }
     }
 
-
-    setTimeout(() => {
-        textAnimated.textContent += handle;
-        printString(0,command,null);
-    }, 0);
-
     setTimeout(() => {
         printArray(0,dino);
-    }, 3000);
+    }, 1000);
 
 
     setTimeout(() => {
         textAnimated.textContent += handle;
         printString(0,welcomecmd,null);
-    }, 8500);
-  }
+    }, 6500);
+
+    }
+  },
+  mounted () {
+    this.console();
+  },
 }   
 </script>
 

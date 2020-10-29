@@ -1,10 +1,12 @@
 <template>
-  <div id="container" class="w-screen h-screen font-mono bg-black">
+  <div id="container" class="w-screen h-screen font-mono bg-white">
     <transition name="slide" enter-active-class="slideInDown" leave-active-class="slideOutUp">
       <Terminal v-if="showTerminal"></Terminal>
-      </transition>
-    <MainPage v-if="!showTerminal" ></MainPage>
-    <Grid v-if="!showTerminal"></Grid>
+    </transition>
+    <transition name="slowFade">
+      <MainPage key="1" v-if="!showTerminal"></MainPage>
+    </transition>
+      <Grid key="2" v-if="!showTerminal"></Grid>
   </div>
 </template>
 
@@ -21,63 +23,19 @@
       }
     },
     created() {
-      setTimeout(() => this.showTerminal = false, 10000)
+      setTimeout(() => this.showTerminal = false, 8500)
     }
 	}
 </script>
 
 <style>
-html,
-body {
-  margin: 0 auto;
-  height: 100%;
-}
 
-pre {
-  padding: 0;
-  margin: 0;
+.slowFade-enter-active, .slowFade-leave-active {
+  transition: opacity 1s;
+  transition-delay: 2s;
 }
-
-.load {
-  margin: 0 auto;
-  min-height: 100%;
-  width: 100%;
-  background: black;
-}
-
-.term {
-  font-family: monospace;
-  color: #fff;
-  opacity: 0.8;
-  font-size: 2em;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-top: 10px;
-  padding-left: 20px;
-}
-
-.term:after {
-  content: "_";
-  opacity: 1;
-  animation: cursor 1s infinite;
-}
-
-@keyframes cursor {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.slowFade-enter, .slowFade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 </style>
