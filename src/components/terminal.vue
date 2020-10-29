@@ -1,5 +1,5 @@
 <template>
-  <div class="load text-xxs xxs:text-xs xs:text-sm absolute">
+  <div id="container" class="load text-xxs xxs:text-xs xs:text-sm md:text-base absolute max-h-screen overflow-y-auto">
       <pre class="term"> </pre>
       <pre class="stego"></pre>
   </div>
@@ -8,6 +8,12 @@
 <script>
 export default {
   name:"Terminal",
+    methods: {
+  	scrollToEnd: function() {    	
+      var container = this.$el.querySelector("#container");
+      container.scrollTop = container.scrollHeight;
+    },
+  },
   mounted () {
     var textAnimated = document.querySelector(".term")
 
@@ -71,6 +77,7 @@ export default {
         } else {
             textAnimated.textContent += "\n";
             printArray(arrayIndex+1,textArray)
+            this.scrollToEnd();
         }
 
     }
@@ -78,6 +85,7 @@ export default {
     function printArray(index,textArray) {
         if (index < textArray.length) {
             printRec(index,0, textArray)
+            this.scrollToEnd();
         }
     }
 

@@ -8,7 +8,7 @@
       </div>
       <div class="bottom-0 absolute flex items-end justify-center bottom-10 animate-bounce animation-delay">
         <a href="#links" v-smooth-scroll>
-          <p class=" text-base xs:text-lg md:text-4xl transform rotate-90 mb-4 md:mb-24">--></p>
+          <p class=" text-base xs:text-lg md:text-2xl lg:text-4xl transform rotate-90 mb-4 xl:mb-24">--></p>
         </a>
       </div>
   </div>
