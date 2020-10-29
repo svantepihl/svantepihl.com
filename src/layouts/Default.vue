@@ -32,7 +32,7 @@
 
 .slowFade-enter-active, .slowFade-leave-active {
   transition: opacity 1s;
-  transition-delay: 2s;
+  transition-delay: 1.5s;
 }
 .slowFade-enter, .slowFade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

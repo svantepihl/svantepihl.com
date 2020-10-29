@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full bg-white flex items-center justify-start">
-      <div class=" ml-3 text-left">
+      <div class=" ml-3 text-left mt-32 xxs:mt-40 xs:mt-48 md:mt-56 lg:mt-56 xl:mt-64">
         <h1 class="text-md md:text-6xl">svante pihl</h1>
         <a class="" href="mailto:hej@svantepihl.com">
           <h3 class="xs:text-md md:text-2xl"> &lt;hej@svantepihl.com&gt;</h3>
