@@ -45,7 +45,7 @@ export default {
         setTimeout(() => {
             textAnimated.textContent += str[index];
             printString(index+1,str);
-        }, 60);
+        }, 30);
     }
 
     function printString(index,str, callback){

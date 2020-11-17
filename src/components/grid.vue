@@ -3,13 +3,13 @@
             <div class="bg-black flex items-center justify-center grid-item left text-sm  lg:text-2xl">
                 <a href="https://github.com/svantepihl" target="_blank" class=" w-full h-full flex items-center justify-center">
                 <Matrix class="opacity-100 lg:opacity-50 hover:opacity-100 hover-fade"></Matrix>
-                <h1 class="text-white absolute "> GITHUB </h1>
+                <g-image src="../assets/icons/github.png" class="absolute" alt="Github logo"></g-image>
                 </a>
             </div>
 
         <div class="flex items-center justify-center grid-item right linkedin text-sm lg:text-2xl">
             <a href="https://www.linkedin.com/in/svantepihl/" target="_blank" class=" w-full h-full flex items-center justify-center">
-            <h1 class="text-white absolute "> LINKEDIN </h1>
+            <g-image src="../assets/icons/linkedin.png" class="absolute"></g-image>
             </a>
         </div>
     </div>
