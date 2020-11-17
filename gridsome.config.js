@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Svante Pihl',
+  siteDescription: 'Personal website for Svante Pihl. Currently searching for jobs within tech! (Located in Uppsala/Stockholm, Sweden)',
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",

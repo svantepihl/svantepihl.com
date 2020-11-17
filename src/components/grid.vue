@@ -3,13 +3,13 @@
             <div class="bg-black flex items-center justify-center grid-item left text-sm  lg:text-2xl">
                 <a href="https://github.com/svantepihl" target="_blank" class=" w-full h-full flex items-center justify-center">
                 <Matrix class="opacity-100 lg:opacity-50 hover:opacity-100 hover-fade"></Matrix>
-                <g-image src="../assets/icons/github.png" class="absolute" alt="Github logo"></g-image>
+                <g-image src="../assets/icons/github.png" blur="none" width="90%" class="absolute logo" alt="Github logo"></g-image>
                 </a>
             </div>
 
         <div class="flex items-center justify-center grid-item right linkedin text-sm lg:text-2xl">
             <a href="https://www.linkedin.com/in/svantepihl/" target="_blank" class=" w-full h-full flex items-center justify-center">
-            <g-image src="../assets/icons/linkedin.png" class="absolute"></g-image>
+            <g-image src="../assets/icons/linkedin.png" blur="none" class="absolute logo" alt="LinkedIn logo"></g-image>
             </a>
         </div>
     </div>
@@ -30,34 +30,19 @@ export default {
     height: 50vh;
 }
 
-
-
-
-
-.grid-item {
-    transition: opacity 0.3s;
-    transition:  2s;
+.logo {
+    transition: all .5s ease-in;
 }
-
-
 
 @media (hover: hover) and (pointer:fine) {
-    .right:hover {
-        margin-left: calc(-100%);
-    }
-    .left:hover {
-    margin-right: calc(-100%);
-}
-.grid-item:hover {
-    z-index: 10;
-    font-size: 200%;
-    transition-delay: 0.4s;
+.grid-item:hover .logo {
+    transform: scale(1.3);
 }
 }
 
 
 .linkedin {
-    background-color: #2867B2;
+    background-color: #005e91;
 }
 
 
