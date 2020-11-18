@@ -13,9 +13,7 @@ export default {
 
     var console = document.querySelector(".load");
 
-    var command = "bash hire-me.sh";
-
-    var welcomecmd = "bash load-page.sh \n";
+    var welcomecmd = "bash hire-me.sh \n";
 
     var handle = "guest@svantepihl:~$";
 
