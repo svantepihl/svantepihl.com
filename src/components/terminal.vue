@@ -43,7 +43,7 @@ export default {
         setTimeout(() => {
             textAnimated.textContent += str[index];
             printString(index+1,str);
-        }, 30);
+        }, 10);
     }
 
     function printString(index,str, callback){
@@ -79,7 +79,7 @@ export default {
 
     setTimeout(() => {
         printArray(0,dino);
-    }, 1000);
+    }, 900);
 
 
     setTimeout(() => {
