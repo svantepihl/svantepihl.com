@@ -1,4 +1,4 @@
-# Default starter for Gridsome
-Personal website, created with Vue.JS, Gridsome and TailwindCSS.
+# Personal website
+Created with Vue.JS, Gridsome and TailwindCSS.
 
 Hosted on Netlify.
