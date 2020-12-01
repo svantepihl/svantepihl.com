@@ -13,7 +13,7 @@ module.exports = {
       use: 'gridsome-plugin-gtag',
       options: {
         config: {
-            id: 'UA-9CKBRVSDLP',
+            id: process.env.GOOGLE_ANALYTICS_ID,
         },
       },
       use: "gridsome-plugin-tailwindcss",
