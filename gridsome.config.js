@@ -10,10 +10,6 @@ module.exports = {
   titleTemplate: 'Svante Pihl - hire me!',
   plugins: [
     {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: 'UA-9CKBRVSDLP'
-      },
       use: "gridsome-plugin-tailwindcss",
       /**
       * These are the default options. You don't need to set any options to get
