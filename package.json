@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "gridsome": "^0.7.0",
+    "gridsome-plugin-gtag": "^0.1.10",
     "typeface-open-sans": "^1.1.13",
     "vue2-animate": "^2.1.4",
     "vue2-smooth-scroll": "^1.5.0"

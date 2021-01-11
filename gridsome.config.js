@@ -10,7 +10,15 @@ module.exports = {
   titleTemplate: 'Svante Pihl - hire me!',
   plugins: [
     {
-      use: "gridsome-plugin-tailwindcss",
-    },
+      use: 'gridsome-plugin-gtag',
+      options: {
+          config: {
+              id: process.env.GOOGLE_ANALYTICS_ID,
+          },
+      },
+  },
+  {
+    use: "gridsome-plugin-tailwindcss",
+  }
   ],
 }
